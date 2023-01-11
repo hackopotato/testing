@@ -67,7 +67,7 @@ resource "azurerm_virtual_machine" "web" {
     inline = [
       "sudo apt-get update",
       "sudo apt-get install -y apache2",
-      "sudo system
+      "sudo system"
       ]
   }
 }
